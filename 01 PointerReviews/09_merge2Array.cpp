@@ -31,6 +31,7 @@ int* merge2Array(int* a, int* b, int na, int nb, int &nc){
         k++;
     }
 
+    //No array allocation to clean up
     return c;
 }
 

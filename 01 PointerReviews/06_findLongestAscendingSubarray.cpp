@@ -1,3 +1,4 @@
+//6: Find the longest ascending subarray
 int* findLongestAscendingSubArray(int* a, int n, int &length){
     //To track id and length of subarrays
     int maxID, maxLength = 1;
@@ -32,7 +33,14 @@ int* findLongestAscendingSubArray(int* a, int n, int &length){
         maxID = i - length;
     }
     
-    int* ptr = &maxID;
-    return ptr;
-}
+    //Return longest subarray
+    int* res = new int[length];
 
+    for (int i = 0; i < length; i++)
+    {
+        res[i] = a[maxID + i];
+    }
+
+    //No array allocation to clean up
+    return res;
+}

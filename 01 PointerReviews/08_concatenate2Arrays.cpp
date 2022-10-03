@@ -17,6 +17,7 @@ int* concatenate2Arrays(int* a, int* b, int na, int nb){
     }
 
     //return c
+    //No array allocation to clean up
     return c;
 }
 
